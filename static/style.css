@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf3f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #3776AB;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.cartao {
+    background-color: white;
+    width: 600px;
+    margin: 100px auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    background-color: #3776AB;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
