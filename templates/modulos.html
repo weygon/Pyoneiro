@@ -1,0 +1,15 @@
+<h1>Módulos</h1>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+{% for m in modulos %}
+    <p><a href="{{ url_for('modulo', id=m.id) }}">{{ m.nome }}</a></p>
+
+{% endfor %}
+
+{% if biblioteca %}
+    <h2>Biblioteca em destaque</h2>
+    <p><strong>{{ biblioteca.nome }}</strong> (versão {{ biblioteca.versao }})</p>
+    <p>{{ biblioteca.resumo }}</p>
+    <p><small>Fonte: PyPI</small></p>
+{% endif %}

@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - Pyoneiro</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
 </head>
 
 <body>
 
-    <h1>Entrar</h1>
+    <h1>Entre na sua conta</h1>
     
     {% if mensagem %}
     <p>{{ mensagem }}</p>

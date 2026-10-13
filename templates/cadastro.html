@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro - Pyoneiro</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
@@ -31,6 +34,8 @@
 
         <button type="submit">Cadastrar</button>
     </form>
+
+    <button><a href="{{ url_for('login') }}" class="botao">Já tem conta?</a></button>
 
 </body>
 </html>

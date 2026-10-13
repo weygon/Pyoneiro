@@ -1,0 +1,21 @@
+<h1>{{ modulo.nome }}</h1>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+{% for paragrafo in modulo.explicacao%}
+<p>{{ paragrafo }}</p>
+{% endfor %}
+
+<h2>Pergunta</h2>
+<p>{{ modulo.pergunta }}</p>
+
+<form method="POST">
+    <input type="text" name="resposta" required>
+    <button type="submit">Responder</button>
+</form>
+
+{% if mensagem %}
+    <strong>{{ mensagem }}</strong></p>
+{% endif %}
+
+<a href="{{ url_for('modulos') }}">Voltar aos módulos</a>
