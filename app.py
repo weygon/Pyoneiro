@@ -16,7 +16,8 @@ def cadastro():
         nome = request.form["nome"]
         email = request.form["email"]
         senha = request.form["senha"]
-        
+        confirmar_senha = request.form["confirmar_senha"]
+
         if nome.strip() == '':
             return render_template("cadastro.html", mensagem = "Nome não informado. colocar o nome.")
         
@@ -25,7 +26,9 @@ def cadastro():
         
         if senha.strip() == "":
             return render_template("cadastro.html", mensagem = "Senha não informada. colocar a senha")
-        
+
+        if senha != confirmar_senha:
+            return render_template("cadastro.html", mensagem = "As senhas estão diferentes, digite novamente.")
 
         if "@" not in email or "." not in email:
             return render_template("cadastro.html", mensagem = "E-mail inválido. coloque o email correto.")
